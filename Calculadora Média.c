@@ -7,11 +7,16 @@
 
 int main()
 {
+    char nome[15] , sobrenome[15];
     float nota1, nota2, nota3, nota4, media;
 
     setlocale(LC_ALL,"");// Adicionando caracteres especiais e acentos no console.
     printf("******Calcule a média das suas notas******\n");
-    printf("\nEscreva o valor da sua primeira nota:\n");
+    printf("Qual é o seu nome?\n");
+    scanf("%s", &nome);
+    printf("Qual é o seu sobrenome?\n");
+    scanf("%s", &sobrenome);
+    printf("Escreva o valor da sua primeira nota:\n");
     // Lendo as notas inseridas.
     scanf("%f", &nota1);
     printf("Escreva o valor da sua segunda nota:\n");
@@ -23,7 +28,7 @@ int main()
     //Calculando a média
     media = ((nota1 + nota2 + nota3 + nota4)/4);
     //Imprimindo na tela a média e o seu calculo.
-    printf("Sua média é: %0.1f\n", media);
+    printf("%s %s, sua média é: %0.1f\n",nome, sobrenome, media);
     printf("Calculo: %0.1f + %0.1f + %0.1f + %0.1f / 4 = %0.1f\n",nota1, nota2, nota3, nota4, media);
     //Condicionais para verificar se está aprovado, ou não,e se deve fazer a recuperação.
     if(media >= 7)
